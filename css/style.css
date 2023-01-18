@@ -35,14 +35,12 @@ header{
 #main-title{
     position: relative;
     animation-name: moveit;
-    animation-duration: 15s;
+    animation-duration: 3s;
 }
 @keyframes moveit {
     from {left: 5%;}
-    to   {left: 100%;}
+    to   {left: 10%;}
 }
-
-
 
 article,footer{
     font-weight: bold;
