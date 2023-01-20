@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form class="m-3" name="fr1">
+        <center>Employee Performance</center>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Salary</label>
+            <input type="text" class="form-control" id="salary" placeholder="Salary" required>
+          </div>
+          <div class="mb-3">
+          <select id="myselect" class="form-select" aria-label="Default select example" onchange="func1()">
+            <option selected>Select Grade</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+        <div class="row">
+            <div class="col">
+                Bonus <input type="text" name="total" class="form-control" placeholder="Bonus" aria-label="Bonus" readonly>
+            </div>
+            <div class="col">
+                Total Salary <input type="text" name="totalsal" class="form-control" placeholder="Total Salary" aria-label="totalsal" readonly>
+            </div>
+          </div><br>
+    </form>
+    <script>
+        function func1(){
+            window.open("index.html","","width=300,height=200");
+            var val = document.getElementById("myselect").value;
+            if(val=="A"){
+                salary = eval(document.getElementById("salary").value);
+                perf = fr1.total.value = (salary*30)/100;
+                fr1.totalsal.value = salary + perf;
+            }
+            else if (val=="B"){
+                perf = salary = eval(document.getElementById("salary").value);
+                perf = fr1.total.value = (salary*10)/100;
+                fr1.totalsal.value = salary + perf;
+            }
+            else{
+                perf = fr1.total.value = 0;
+                fr1.totalsal.value = salary + perf;
+            }
+        }
+    </script>
+</body>
+</html>

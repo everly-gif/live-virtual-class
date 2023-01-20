@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>jsform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form class="m-3" name="fr1">
+        <center>Student Mark Details</center>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+          </div>
+        <div class="row">
+            <div class="col">
+              Maths <input type="text" name="maths" class="form-control" placeholder="Maths" aria-label="Maths" required>
+            </div>
+            <div class="col">
+              English <input type="text" name="english" class="form-control" placeholder="English" aria-label="English" required>
+            </div>
+            <div class="col">
+               Computer <input type="text" name="computer" class="form-control" placeholder="Computer" aria-label="Computer" required>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                Total Marks <input type="text" name="total" class="form-control" placeholder="Total Marks" aria-label="Total marks" readonly>
+            </div>
+            <div class="col">
+                % Marks <input type="text" name="percent" class="form-control" placeholder="Percentage Marks" aria-label="percentagemarks" readonly>
+            </div>
+            <div class="col">
+                Max Marks <input type="text" name="maxMarks" class="form-control" placeholder="Max Marks" aria-label="maxmarks" readonly>
+            </div>
+          </div><br>
+          <button type="button" class="btn btn-primary" onclick="jsfunc1()"> Calculate Marks</button>
+    </form>
+    <script>
+        function jsfunc1(){
+             maths = eval(fr1.maths.value);
+            eng =eval(fr1.english.value);
+            comp = eval(fr1.computer.value);
+            max = 0;
+            if(eng>=maths && eng>>comp) max = eng;
+            else if(maths>=comp && maths>=eng) max = maths;
+            else max = comp;
+
+            if(maths=='' || eng =='' || comp =='')
+            {
+                alert("Can't be empty");
+            }
+            else{
+             
+                totalVal = fr1.total.value=maths+eng+comp;
+                fr1.percent.value = (totalVal/300) * 100;
+                fr1.maxMarks.value = max;
+            }
+        }
+    </script>
+</body>
+</html>

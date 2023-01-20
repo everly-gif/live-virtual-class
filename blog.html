@@ -1,4 +1,15 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <style>
+td{
+    width:70%;
+}
+td:nth-child(2){
+    padding-left: 30px;
+}
+select{
+    height:50px;
+}
 p{
     column-count: 3;
     column-rule : 5px solid salmon;
@@ -14,9 +25,14 @@ p{
         color:white;
         background-color: blue;
     }
+    
 }
 </style>
 
+<table>
+
+<tr>
+<td>
 <p>This is 
     An example of the Lorem ipsum placeholder text on a green and white webpage.
 Using Lorem ipsum to focus attention on graphic elements in a webpage design proposal
@@ -28,3 +44,22 @@ Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a
 
 Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by advertisements for Letraset transfer sheets.[1] Lorem ipsum was introduced to the digital world in the mid-1980s, when Aldus employed it in graphic and word-processing templates for its desktop publishing program PageMaker. Other popular word processors, including Pages and Microsoft Word, have since adopted Lorem ipsum,[2] as have many LaTeX packages,[3][4][5] web content managers such as Joomla! and WordPress, and CSS libraries such as Semantic UI.[6]
 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.BlogLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</td>
+<td>
+    <h1>Reference websites</h1>
+    <form name="fr1">
+        <select name="myselect" class="form-select" onchange="func()" style="width:200px;height:40px">
+            <option value="https://google.com">Google</option>
+            <option value="https://yahoo.com">Yahoo</option>
+            <option value="https://web.whatsapp.com">WhatsApp</option>
+        </select>
+    </form>
+</td>
+</tr>
+
+</table>
+<script>
+    function func(){
+        window.open(fr1.myselect.value,"");
+    }
+</script>

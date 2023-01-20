@@ -44,23 +44,41 @@
     </style>
 </head>
 <body>
-    <form id="myform">
+    <form id="myform" name="fr1" action="thanks.html" onsubmit="func1()">
         <label>Name</label>
-        <input type="text"><br><br>
+        <input type="text" name="name"><br><br>
         <label>Gender  </label>
-        Male<input type="radio"/>Female<input type="radio"><br><br>
+        Male<input name="gender" type="radio"/>Female<input name="gender" type="radio"><br><br>
         <label>Email</label>
-        <input type="email"><br><br>
-        <label>Location</label>
-        <select>
-            <option>Pune</option>
-            <option>Mumbai</option>
+        <input type="email" name="email"><br><br>
+        <label>Course Required</label>
+        <select name="myselect">
+            <option value="MEAN">MEAN</option>
+            <option value="MERN">MERN</option>
+            <option value="DEVOPS">DEVOPS</option>
         </select><br><br>
-        <label>Software Knowledge</label><br><br>
+        <!-- <label>Software Knowledge</label><br><br>
         word<input type="checkbox"><br>
-        Powerpoint<input type="checkbox"><br><br>
-        Remarks  <textarea></textarea><br><br>
+        Powerpoint<input type="checkbox"><br><br> -->
+        Other Requirements  <textarea name="other"></textarea><br><br>
         <button type="submit">Submit</button>
     </form>
 </body>
 </html>
+<script>
+ function func1(){
+ name  = fr1.name.value;
+ email = fr1.email.value;
+ gender = fr1.gender[0].checked ? "male" : "female";
+ course = fr1.myselect.value;
+ other = fr1.other.value;
+ if(name=='' || email==''){
+  alert("Please enter name and email");
+ }
+
+ else{
+    alert("Name: " + name + "\nEmail: " + email + "\nGender: " + gender + "\nCourse: " + course + "\nOther: " + other);
+ }
+
+ }
+</script>
